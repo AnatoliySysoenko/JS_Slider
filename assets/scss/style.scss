@@ -1,25 +1,28 @@
 /** @format */
 @import '../../libs/normalize-scss/sass/normalize/import-now';
-@import '../scss/skin';
 @import '../scss/variables';
 @import '../scss/mixins';
+@import '../scss/skin';
+
+@import '../scss/common';
+
 @import '../scss/mixins-media';
 
-/*
-essential styles:
-these make the slideshow work
-*/
-
+.container {
+  max-width: $md;
+  padding: 0 $gap;
+  margin: auto;
+}
 .slides {
   position: relative;
   height: 150px;
-  @include unlist;
+  @include unlist(0 0 $gap-sm 0);
 }
 
 .slide {
   opacity: 0;
   z-index: -999;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 
   @include abs-position;
 }
@@ -29,11 +32,12 @@ these make the slideshow work
 }
 
 .slide {
-  font-size: 40px;
-  padding: 40px;
+  font-size: $gap * 2;
+  padding: $gap * 2;
   box-sizing: border-box;
   background: #333;
   color: #fff;
+  text-align: center;
 
   &:nth-of-type(1) {
     background: red;
@@ -49,5 +53,44 @@ these make the slideshow work
   }
   &:nth-of-type(5) {
     background: purple;
+  }
+}
+
+.controls {
+  display: flex;
+  gap: $gap-sm;
+  margin-bottom: $gap-sm;
+}
+.control {
+  display: block;
+  cursor: pointer;
+  padding: $gap-sm * 0.5;
+  background-color: darken($color-gray, 20%);
+  color: $color-light;
+  border-radius: $gap * 0.3333;
+  user-select: none;
+  text-align: center;
+
+  &-pause {
+    min-width: $gap * 3;
+  }
+}
+
+.indicators {
+  display: flex;
+  gap: $gap-sm;
+}
+.indicator {
+  background-color: transparent;
+  width: $gap * 2;
+  height: $gap * 0.25;
+  border: 1px solid $color-gray;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+
+  &.active {
+    background-color: darken($color-gray, 20%);
+    border-color: darken($color-gray, 20%);
   }
 }

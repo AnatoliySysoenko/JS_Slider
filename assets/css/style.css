@@ -419,7 +419,18 @@ template {
   display: none;
 }
 
-/** @format */ /** @format */ /**
+/** @format */ /** @format */ /** @format */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+/**
  * /* xl
  *
  * @format
@@ -429,14 +440,16 @@ template {
 /* sm */
 /* xs */
 /* xx */
-/*
-essential styles:
-these make the slideshow work
-*/
+.container {
+  max-width: 992px;
+  padding: 0 20px;
+  margin: auto;
+}
+
 .slides {
   position: relative;
   height: 150px;
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0;
   list-style: none;
 }
@@ -444,9 +457,9 @@ these make the slideshow work
 .slide {
   opacity: 0;
   z-index: -999;
-  -webkit-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
   position: absolute;
   top: 0;
   right: 0;
@@ -465,6 +478,7 @@ these make the slideshow work
           box-sizing: border-box;
   background: #333;
   color: #fff;
+  text-align: center;
 }
 .slide:nth-of-type(1) {
   background: red;
@@ -480,4 +494,53 @@ these make the slideshow work
 }
 .slide:nth-of-type(5) {
   background: purple;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.control {
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+  background-color: #999999;
+  color: #eeeeee;
+  border-radius: 6.666px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+}
+.control-pause {
+  min-width: 60px;
+}
+
+.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  background-color: transparent;
+  width: 40px;
+  height: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.indicator.active {
+  background-color: #999999;
+  border-color: #999999;
 }
