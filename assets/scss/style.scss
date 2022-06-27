@@ -1,0 +1,53 @@
+/** @format */
+@import '../../libs/normalize-scss/sass/normalize/import-now';
+@import '../scss/skin';
+@import '../scss/variables';
+@import '../scss/mixins';
+@import '../scss/mixins-media';
+
+/*
+essential styles:
+these make the slideshow work
+*/
+
+.slides {
+  position: relative;
+  height: 150px;
+  @include unlist;
+}
+
+.slide {
+  opacity: 0;
+  z-index: -999;
+  transition: opacity 1s;
+
+  @include abs-position;
+}
+
+.active {
+  opacity: 1;
+}
+
+.slide {
+  font-size: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+
+  &:nth-of-type(1) {
+    background: red;
+  }
+  &:nth-of-type(2) {
+    background: orange;
+  }
+  &:nth-of-type(3) {
+    background: green;
+  }
+  &:nth-of-type(4) {
+    background: blue;
+  }
+  &:nth-of-type(5) {
+    background: purple;
+  }
+}
