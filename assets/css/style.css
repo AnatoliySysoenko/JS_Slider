@@ -517,6 +517,18 @@ body {
           user-select: none;
   text-align: center;
 }
+.control-pause {
+  position: relative;
+  min-width: 30px;
+}
+.control-pause > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 
 .indicators {
   display: -webkit-box;
