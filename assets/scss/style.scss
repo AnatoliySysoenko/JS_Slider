@@ -70,15 +70,12 @@
   border-radius: $gap * 0.3333;
   user-select: none;
   text-align: center;
-
-  &-pause {
-    min-width: $gap * 3;
-  }
 }
 
 .indicators {
   display: flex;
   gap: $gap-sm;
+  margin-bottom: $gap-sm;
 }
 .indicator {
   background-color: transparent;

@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -17,6 +18,7 @@
 <body>
 
 	<div class="container">
+
 		<div id="carousel" class="carousel">
 			<ul id="slides-container" class="slides">
 				<li class="slide active">Slide 1</li>
@@ -26,23 +28,11 @@
 				<li class="slide">Slide 5</li>
 			</ul>
 
-			<div id="controls-container" class="controls">
-				<span class="control control-pause" id="pause">Pause</span>
-				<span class="control control-prev" id="prev">Prev</span>
-				<span class="control control-next" id="next">Next</span>
-			</div>
-
-			<div class="indicators">
-				<div class="indicator active" data-slide-to="0"></div>
-				<div class="indicator" data-slide-to="1"></div>
-				<div class="indicator" data-slide-to="2"></div>
-				<div class="indicator" data-slide-to="3"></div>
-				<div class="indicator" data-slide-to="4"></div>
-			</div>
-
 		</div>
 	</div>
 
+	<script src="assets/js/carousel.js"></script>
+	<script src="assets/js/swipe-carousel.js"></script>
 	<script src="assets/js/main.js"></script>
 </body>
 

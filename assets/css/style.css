@@ -517,15 +517,13 @@ body {
           user-select: none;
   text-align: center;
 }
-.control-pause {
-  min-width: 60px;
-}
 
 .indicators {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .indicator {
