@@ -163,7 +163,7 @@ class Carousel {
 
   init() {
     this._initProps();
-    -this._initControls();
+    this._initControls();
     this._initIndicators();
     this._initListeners();
     this._tick(this.isPlaying);
