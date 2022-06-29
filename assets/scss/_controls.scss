@@ -15,7 +15,7 @@
   top: 0;
 
   width: 100%;
-  height: 80vh;
+  height: calc(100vh - ($gap * 5));
 }
 
 .control {

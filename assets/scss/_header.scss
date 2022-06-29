@@ -2,7 +2,6 @@
 
 .header {
   position: absolute;
-  z-index: 2;
   top: 0;
   right: 0;
   left: 0;
@@ -23,8 +22,8 @@
     grid-template-columns: auto 1fr;
 
     &__logo {
-      width: 80px;
-      height: 80px;
+      width: $gap * 4;
+      height: $gap * 4;
 
       background-image: url(../img/logo.png);
       background-position: center;
@@ -38,7 +37,7 @@
 
       width: 100%;
 
-      letter-spacing: 0.1em;
+      letter-spacing: 0.15em;
 
       color: $color-light;
 

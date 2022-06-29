@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
 
-  min-height: calc(20vh - ($gap * 3));
+  min-height: $gap * 2;
 
   text-align: center;
 
