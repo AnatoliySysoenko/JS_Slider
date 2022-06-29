@@ -5,14 +5,18 @@
   right: 0;
   bottom: 0;
   left: 0;
-  min-height: 60px;
-  background-color: $color-success;
-  background-image: url(../img/bg-header.jpeg);
-  @extend %bg-image;
 
   display: flex;
   align-items: center;
+
+  min-height: calc(20vh - ($gap * 3));
+
   text-align: center;
+
+  background-color: $color-success;
+  background-image: url(../img/bg-header.jpeg);
+
+  @extend %bg-image;
 
   &-title {
     font-size: 1.2rem;

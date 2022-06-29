@@ -12,6 +12,7 @@
 
   background-color: rgba($color-dark, 0.7);
   background-image: url(../img/bg-header.jpeg);
+
   @extend %bg-image;
 
   &-menu {

@@ -2,8 +2,6 @@
 
 import SwipeCarousel from './swipe-carousel.js';
 
-const carousel = new SwipeCarousel({
-  isPlaying: false,
-});
+const carousel = new SwipeCarousel();
 
 carousel.init();

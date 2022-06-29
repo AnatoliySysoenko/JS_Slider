@@ -19,10 +19,9 @@
   opacity: 0;
   background-color: steelblue;
 
-  @extend %bg-image;
-
   font-size: $gap * 2;
 
+  @extend %bg-image;
   @include abs-position;
 
   &.active {

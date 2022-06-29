@@ -43,7 +43,6 @@
     justify-content: center;
 
     cursor: pointer;
-
     transition: opacity 0.5s ease-out;
 
     opacity: 0;
@@ -76,9 +75,9 @@
     &:focus {
       color: $color-light;
       background: linear-gradient(
-        to right,
-        rgba($color-success, 0.8),
-        rgba($color-success, 0)
+      to right,
+      rgba($color-success, 0.8),
+      rgba($color-success, 0)
       );
       text-shadow: 0 0 $gap-sm $color-light;
     }
@@ -96,9 +95,9 @@
     &:focus {
       color: $color-light;
       background: linear-gradient(
-        to left,
-        rgba($color-success, 0.8),
-        rgba($color-success, 0)
+      to left,
+      rgba($color-success, 0.8),
+      rgba($color-success, 0)
       );
       text-shadow: 0 0 $gap-sm $color-light;
     }
