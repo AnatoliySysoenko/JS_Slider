@@ -1,0 +1,13 @@
+/** @format */
+
+.container {
+  width: 100%;
+  max-width: $lg;
+  margin: auto;
+  padding: 0 $gap;
+}
+.carousel {
+  position: relative;
+
+  margin-top: $gap * 4;
+}

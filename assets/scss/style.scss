@@ -1,104 +1,18 @@
 /** @format */
 @import '../../libs/normalize-scss/sass/normalize/import-now';
-@import '../scss/variables';
-@import '../scss/mixins';
-@import '../scss/skin';
 
-@import '../scss/common';
+@import '../scss/pressets/skin';
+@import '../scss/pressets/variables';
+@import '../scss/mixsins/mixins';
+@import '../scss/mixsins/extends';
 
-@import '../scss/mixins-media';
+@import '../scss/commons/typography';
+@import '../scss/commons/classes';
 
-.container {
-  max-width: $md;
-  padding: 0 $gap;
-  margin: auto;
-}
-.slides {
-  position: relative;
-  height: 150px;
-  @include unlist(0 0 $gap-sm 0);
-}
+@import '../scss/header';
+@import '../scss/slides';
+@import '../scss/controls';
+@import '../scss/indicators';
+@import '../scss/footer';
 
-.slide {
-  opacity: 0;
-  z-index: -999;
-  transition: opacity 0.5s;
-
-  @include abs-position;
-}
-
-.active {
-  opacity: 1;
-}
-
-.slide {
-  font-size: $gap * 2;
-  padding: $gap * 2;
-  box-sizing: border-box;
-  background: #333;
-  color: #fff;
-  text-align: center;
-
-  &:nth-of-type(1) {
-    background: red;
-  }
-  &:nth-of-type(2) {
-    background: orange;
-  }
-  &:nth-of-type(3) {
-    background: green;
-  }
-  &:nth-of-type(4) {
-    background: blue;
-  }
-  &:nth-of-type(5) {
-    background: purple;
-  }
-}
-
-.controls {
-  display: flex;
-  gap: $gap-sm;
-  margin-bottom: $gap-sm;
-}
-.control {
-  display: block;
-  cursor: pointer;
-  padding: $gap-sm * 0.5;
-  background-color: darken($color-gray, 20%);
-  color: $color-light;
-  border-radius: $gap * 0.3333;
-  user-select: none;
-  text-align: center;
-
-  &-pause {
-    position: relative;
-    min-width: $gap-sm * 3;
-    > span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-}
-
-.indicators {
-  display: flex;
-  gap: $gap-sm;
-  margin-bottom: $gap-sm;
-}
-.indicator {
-  background-color: transparent;
-  width: $gap * 2;
-  height: $gap * 0.25;
-  border: 1px solid $color-gray;
-  border-radius: 2px;
-  cursor: pointer;
-  user-select: none;
-
-  &.active {
-    background-color: darken($color-gray, 20%);
-    border-color: darken($color-gray, 20%);
-  }
-}
+@import '../scss/mixsins/mixins-media';

@@ -1,0 +1,20 @@
+/** @format */
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 60px;
+  background-color: $color-success;
+  background-image: url(../img/bg-header.jpeg);
+  @extend %bg-image;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  &-title {
+    font-size: 1.2rem;
+  }
+}

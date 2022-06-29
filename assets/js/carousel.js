@@ -6,7 +6,7 @@ class Carousel {
       ...{
         containerID: '#carousel',
         slideID: '.slide',
-        interval: 1000,
+        interval: 3000,
         isPlaying: true,
       },
       ...p,
@@ -43,7 +43,7 @@ class Carousel {
     const PREV = `<span class="control control-prev" id="prev">${this.FA_PREV}</span>`;
     const NEXT = `<span class="control control-next" id="next">${this.FA_NEXT}</span>`;
     controls.setAttribute('class', 'controls');
-    controls.innerHTML = PAUSE + PREV + NEXT;
+    controls.innerHTML = PREV + PAUSE + NEXT;
     this.container.append(controls);
 
     this.pauseBtn = document.querySelector('#pause');
@@ -125,17 +125,19 @@ class Carousel {
   }
 
   _pause() {
-    clearInterval(this.intervalID);
-    this.isPlaying = false;
-    this._playVisible();
-    // this.pauseBtn.innerHTML = this.FA_PLAY;
+    if (this.isPlaying) {
+      this._playVisible();
+      this.isPlaying = false;
+      clearInterval(this.intervalID);
+    }
   }
 
   _play() {
-    this.isPlaying = true;
-    this._pauseVisible();
-    // this.pauseBtn.innerHTML = this.FA_PAUSE;
-    this._tick();
+    if (!this.isPlaying) {
+      this._pauseVisible();
+      this.isPlaying = true;
+      this._tick();
+    }
   }
 
   _indicate(e) {

@@ -1,0 +1,48 @@
+/** @format */
+
+.header {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: $gap * 4;
+
+  background-color: rgba($color-dark, 0.7);
+  background-image: url(../img/bg-header.jpeg);
+  @extend %bg-image;
+
+  &-menu {
+    display: grid;
+
+    width: 100%;
+
+    grid-template-columns: auto 1fr;
+
+    &__logo {
+      width: 80px;
+      height: 80px;
+
+      background-image: url(../img/logo.png);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      width: 100%;
+
+      letter-spacing: 0.1em;
+
+      color: $color-light;
+
+      font-family: $font-header;
+      font-size: 2rem;
+    }
+  }
+}

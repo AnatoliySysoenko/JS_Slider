@@ -1,0 +1,30 @@
+/** @format */
+
+.indicators {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  margin-bottom: $gap-sm;
+
+  gap: $gap;
+}
+.indicator {
+  width: $gap * 2;
+  height: $gap * 0.3;
+
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid $color-light;
+  border-radius: 3px;
+  background-color: transparent;
+
+  &.active {
+    border-color: $color-success-light;
+    background-color: $color-success-light;
+  }
+}
